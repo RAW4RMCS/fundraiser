@@ -108,7 +108,7 @@ function App() {
 								color='text.secondary'
 								fontFamily='Luxurious Roman'
 							>
-								We asked him to make this video was made short after his diagnose (19 nov. 2021)
+								We asked him to make this video short after his diagnose (19 nov. 2021)
 							</Typography>
 						</Grid>
 						<Grid item xs={12} sm={12} md={6}>
