@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import { useMemo, useState } from 'react';
 
 function App() {
-	const [customAmount, setCustomAmount] = useState(0);
+	const [amount, setAmount] = useState(0);
 
 	const theme = useMemo(() => {
 		let theme = createTheme({
@@ -79,9 +79,9 @@ function App() {
 					width: '100%'
 				}}
 			>
-				<Stack spacing={2} direction='column' justifyContent='center' alignItems='center'>
+				<Stack direction='column' justifyContent='center' alignItems='center'>
 					<Avatar alt='Lukas' src='/lukas.jpg' sx={{ width: 200, height: 200 }} />
-					<Typography variant='h4' color='text.primary' textAlign='center' fontFamily='Luxurious Roman'>
+					<Typography variant='h4' color='text.primary' textAlign='center' fontFamily='Luxurious Roman' padding={'16px 0'}>
 						Hi, I am Lukas and this is my story!
 					</Typography>
 					<Divider
@@ -104,6 +104,7 @@ function App() {
 								</video>
 							</Box>
 							<Typography
+							style={{display: 'flex', flexGrow: 1, justifyContent: 'center'}}
 								variant='caption'
 								color='text.secondary'
 								fontFamily='Luxurious Roman'
@@ -111,7 +112,65 @@ function App() {
 								We asked him to make this video short after his diagnose (19 nov. 2021)
 							</Typography>
 						</Grid>
-						<Grid item xs={12} sm={12} md={6}>
+						<Grid item xs={12} sm={12} md={6} paddingRight={[0,0,4]}>
+						<Grid container spacing={1}>
+								<Grid item xs={6} lg={3}>
+									<StyledButton
+										variant={amount === 100_000_000 ? 'contained' : 'outlined'}
+										size='small'
+										onClick={() => setAmount(100_000_000)}
+									>
+										1 ICP
+									</StyledButton>
+								</Grid>
+								<Grid item xs={6} lg={3}>
+									<StyledButton
+										variant={amount === 500_000_000 ? 'contained' : 'outlined'}
+										size='small'
+										onClick={() => setAmount(500_000_000)}
+									>
+										5 ICP
+									</StyledButton>
+								</Grid>
+								<Grid item xs={6} lg={3}>
+									<StyledButton
+										variant={amount === 1_000_000_000 ? 'contained' : 'outlined'}
+										size='small'
+										onClick={() => setAmount(1_000_000_000)}
+									>
+										10 ICP
+									</StyledButton>
+								</Grid>
+								<Grid item xs={6} lg={3}>
+									<StyledButton
+										variant={amount === 1_500_000_000 ? 'contained' : 'outlined'}
+										size='small'
+										onClick={() => setAmount(1_500_000_000)}
+									>
+										15 ICP
+									</StyledButton>
+								</Grid>
+							</Grid>
+							<Box display='flex' paddingTop={1} flexDirection={['column', 'column', 'row']} paddingBottom={3}>
+								<StyledTextField
+								sx={{
+									marginBottom: [0.5, 0.5, 0]
+								}}
+									label='Custom amount'
+									type='number'
+									onChange={e => setAmount(Number(e.target.value) * 100_000_000)}
+								/>
+								<Box display='flex' flexGrow={1} paddingLeft={[0,0,1]}>
+									<StyledButton
+										disabled={amount <= 0}
+										variant='contained'
+										size='small'
+										onClick={() => handleOnDonate(amount)}
+									>
+										Donate
+									</StyledButton>
+								</Box>
+							</Box>
 							<Typography
 								variant='body2'
 								gutterBottom
@@ -157,75 +216,6 @@ function App() {
 								difficult, and Lukas keeps fighting cancer. He is not able to work right now and his
 								pregnant girlfriend neither, so they do not have a stable income.
 							</Typography>
-							<Grid container spacing={1}>
-								<Grid item xs={4}>
-									<StyledButton
-										variant='outlined'
-										size='large'
-										onClick={() => handleOnDonate(100_000_000)}
-									>
-										1 ICP
-									</StyledButton>
-								</Grid>
-								<Grid item xs={4}>
-									<StyledButton
-										variant='outlined'
-										size='large'
-										onClick={() => handleOnDonate(500_000_000)}
-									>
-										5 ICP
-									</StyledButton>
-								</Grid>
-								<Grid item xs={4}>
-									<StyledButton
-										variant='outlined'
-										size='large'
-										onClick={() => handleOnDonate(1_000_000_000)}
-									>
-										10 ICP
-									</StyledButton>
-								</Grid>
-								<Grid item xs={6}>
-									<StyledButton
-										variant='outlined'
-										size='large'
-										onClick={() => handleOnDonate(1_500_000_000)}
-									>
-										15 ICP
-									</StyledButton>
-								</Grid>
-								<Grid item xs={6}>
-									<StyledButton
-										variant='outlined'
-										size='large'
-										onClick={() => handleOnDonate(2_000_000_000)}
-									>
-										20 ICP
-									</StyledButton>
-								</Grid>
-							</Grid>
-							<Divider
-								sx={{
-									width: '100%',
-									marginY: 2
-								}}
-							/>
-							<Box display='flex' flexDirection={['column', 'column', 'row']}>
-								<StyledTextField
-									label='Custom amount'
-									type='number'
-									onChange={e => setCustomAmount(Number(e.target.value))}
-								/>
-								<Box marginLeft={[0, 0, 1]} marginTop={[1, 1, 0]} width={['100%', '100%', '50%']}>
-									<StyledButton
-										variant='contained'
-										size='large'
-										onClick={() => handleOnDonate(customAmount * 100_000_000)}
-									>
-										Donate
-									</StyledButton>
-								</Box>
-							</Box>
 						</Grid>
 					</Grid>
 				</Stack>
