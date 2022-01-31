@@ -234,7 +234,7 @@ function App() {
 								color='text.secondary'
 								fontFamily='Luxurious Roman'
 							>
-								All donations are send to a coinbase account controlled by Anna
+								All donations are send to a ICP wallet controlled by Anna
 							</Typography>
 						</Grid>
 					</Grid>
