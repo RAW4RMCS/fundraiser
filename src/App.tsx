@@ -151,13 +151,14 @@ function App() {
 									</StyledButton>
 								</Grid>
 							</Grid>
-							<Box display='flex' paddingTop={1} flexDirection={['column', 'column', 'row']} paddingBottom={3}>
+							<Box display='flex' paddingTop={1} flexDirection={['column', 'column', 'row']} paddingBottom={1}>
 								<StyledTextField
 								sx={{
 									marginBottom: [0.5, 0.5, 0]
 								}}
 									label='Custom amount'
 									type='number'
+									value={amount / 100_000_000}
 									onChange={e => setAmount(Number(e.target.value) * 100_000_000)}
 								/>
 								<Box display='flex' flexGrow={1} paddingLeft={[0,0,1]}>
@@ -174,6 +175,16 @@ function App() {
 							<Typography
 								variant='body2'
 								gutterBottom
+								sx={{paddingBottom: 1, overflowWrap: 'break-word'}}
+								color='text.secondary'
+								fontFamily='Luxurious Roman'
+							>
+								<strong>Wallet address:</strong> 8ead44e70d740aa347203143b3d8ab09c5aeed318aeb3db2e527846875c27e2a
+							</Typography>
+							<Divider sx={{marginBottom: 2}}/>
+							<Typography
+								variant='body2'
+								gutterBottom
 								color='text.secondary'
 								fontFamily='Luxurious Roman'
 							>
@@ -181,7 +192,6 @@ function App() {
 								founder Lukas has been diagnosed with cancer. To provide for his family, me and a couple
 								of friend and co-internet computer developers decided to set up a fundraiser.
 							</Typography>
-							<Divider style={{ margin: '16px' }} />
 							<Typography gutterBottom variant='h6'>
 								Who is Lukas Merville?
 							</Typography>
@@ -215,6 +225,16 @@ function App() {
 								Poland, but the doctors recommend him to continue his treatment in Canada. The situation is
 								difficult, and Lukas keeps fighting cancer. He is not able to work right now and his
 								pregnant girlfriend neither, so they do not have a stable income.
+							</Typography>
+							<Divider style={{ margin: '16px' }} />
+							<Typography
+								variant='caption'
+								gutterBottom
+								sx={{paddingBottom: 1 }}
+								color='text.secondary'
+								fontFamily='Luxurious Roman'
+							>
+								All donations are send to a coinbase account controlled by Anna
 							</Typography>
 						</Grid>
 					</Grid>
