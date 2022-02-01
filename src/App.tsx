@@ -106,10 +106,19 @@ function App() {
 							<Typography
 							style={{display: 'flex', flexGrow: 1, justifyContent: 'center'}}
 								variant='caption'
+								fontWeight='bold'
 								color='text.secondary'
 								fontFamily='Luxurious Roman'
 							>
 								This video was made shortly after his diagnoses (19 Nov. 2021) 
+							</Typography>
+							<Typography
+							style={{display: 'flex', flexGrow: 1, justifyContent: 'center'}}
+								variant='caption'
+								color='text.secondary'
+								fontFamily='Luxurious Roman'
+							>
+								The video doesnt display on most mobile devices 
 							</Typography>
 						</Grid>
 						<Grid item xs={12} sm={12} md={6} paddingRight={[0,0,4]}>
