@@ -109,7 +109,7 @@ function App() {
 								color='text.secondary'
 								fontFamily='Luxurious Roman'
 							>
-								We asked him to make this video short after his diagnose (19 nov. 2021)
+								This video was made shortly after his diagnoses (19 Nov. 2021) 
 							</Typography>
 						</Grid>
 						<Grid item xs={12} sm={12} md={6} paddingRight={[0,0,4]}>
@@ -188,9 +188,7 @@ function App() {
 								color='text.secondary'
 								fontFamily='Luxurious Roman'
 							>
-								Hello everyone, I’m Martin, a team member of NFT Studio. As you might have heard, our
-								founder Lukas has been diagnosed with cancer. To provide for his family, me and a couple
-								of friend and co-internet computer developers decided to set up a fundraiser.
+								Hello everyone, I am Martin a team member of the NFT Studio project. As you might have heard our founder Lukas Merville has been diagnosed with cancer. To help Lukas provide for his family in this difficult time - myself, and a couple of developer friends from other IC projects decided to setup a fundraising page. If you have a moment, please watch the video and if you can afford to donate, please do. Thank you. 
 							</Typography>
 							<Typography gutterBottom variant='h6'>
 								Who is Lukas Merville?
@@ -202,11 +200,8 @@ function App() {
 								color='text.secondary'
 								fontFamily='Luxurious Roman'
 							>
-								Lukas graduated in Art History, Philosophy of Arts and Literature. After graduation he
-								decided to explore other countries, he lived in Japan and South Korea for ten years.
-								During that time, he met his girlfriend Anna and since then they are in love, living in
-								Poland. Lukas is a smart guy who made attention of big tech companies and people in the
-								Crypto sphere.
+								Lukas graduated in Art History, Philosophy of Arts and Literature. After graduation he decided to explore other countries and lived in Japan and South Korea for ten years. It was during this time; he met his girlfriend Anna and they fell in love. In early 2021 Lukas and Anna found out that she was pregnant and decided to move to Poland to be closer to Anna's family. 
+In Poland things were going really well, Lukas was hard at work developing the NFT Studio project and it didn’t take long for his work to capture the attention of the Dfinity foundation, and after highlighting NFT Studio in a tweet, the project really started to take off. 
 							</Typography>
 							<Typography gutterBottom variant='h6'>
 								What happened?
@@ -218,13 +213,17 @@ function App() {
 								color='text.secondary'
 								fontFamily='Luxurious Roman'
 							>
-								As some of you know he founded the project called NFT Studio approximately 6 months ago
-								while he was living in Poland. Lukas was developing his project when he and his
-								girlfriend found out that she was pregnant. The happiness did not last long
-								because Lukas was diagnosed with colon cancer. He started treatment in
-								Poland, but the doctors recommend him to continue his treatment in Canada. The situation is
-								difficult, and Lukas keeps fighting cancer. He is not able to work right now and his
-								pregnant girlfriend neither, so they do not have a stable income.
+								However the happiness of the year was overshadowed in November, when Lukas was diagnosed with colon cancer. After starting his treatment in Poland, the doctors recommended he continued his treatment in Canada, where he’d have a better chance of recovery. 
+Now in Canada, the situation is difficult. With Lukas fighting his cancer daily, he is not able to work, and with the baby due in February neither can Anna as she is heavily pregnant - meaning they do not have a stable income – which is why we really felt the need to create this fundraiser to support them.
+							</Typography>
+							<Typography
+								variant='body2'
+								gutterBottom
+								style={{ paddingBottom: '16px' }}
+								color='text.secondary'
+								fontFamily='Luxurious Roman'
+							>
+								Thank you for taking the time to read this, and if you do decide to donate thank you for your support.
 							</Typography>
 							<Divider style={{ margin: '16px' }} />
 							<Typography
